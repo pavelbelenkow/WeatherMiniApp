@@ -5,11 +5,11 @@ public final class WeatherMiniApp: MiniAppProtocol {
     
     // MARK: - Public Properties
     
-    public var title: String { Const.miniAppTitle }
+    public var title: String = Const.miniAppTitle
     
-    public var icon: UIImage { UIImage(systemName: Const.miniAppIcon) ?? UIImage() }
+    public var icon: UIImage = UIImage(systemName: Const.miniAppIcon) ?? UIImage()
     
-    public var view: UIView { WeatherView.create() }
+    public private(set) var view: UIView = WeatherView.create()
     
     // MARK: - Public Initializers
     
